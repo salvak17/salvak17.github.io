@@ -26,6 +26,9 @@ body.fade-out {
 	top: 0; /* This ensures no space is displayed above the navbar */
 	width: 100%; /* This makes the navbar span the entire width of the page */
 	z-index: 1; /*This ensures other elements don't display over the navbar */
+		position: fixed;
+	-webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+		animation: moveNav 5s;
 }
 
 /* Navbar text */
@@ -33,11 +36,33 @@ body.fade-out {
 	float: left; /* This specifies that the text floats on the left on the navbar */
 	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
 	color: white; /* This is the font color for text on our navbar */
-	padding: 14px 16px; /* This adds padding around our text */
+	padding: .75vw 1vw; /* This adds padding around our text */
 	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-	font-size: 20px; /* This specifies the font size for text on our navbar */
+	font-family: 'Times New Roman', Times, serif; /* This specifies the font family for text on our navbar */
+	font-size: 1.5vw; /* This specifies the font size for text on our navbar */
 	text-align: center; /* This centers the text within its container */
+		position: relative;
+	-webkit-animation: movenavText 4s; /* Safari 4.0 - 8.0 */
+		animation: movenavText 4s;
+	letter-spacing: .2vw;
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen*/
+@keyframes moveNav {
+	from {left: -100vw;}
+	to {left: 0vw;}
+}
+
+/* The animation effect for moving the nave bar in from above the top of the screen */
+@keyframes movenavText {
+	from {top: -100vw;}
+	to {top: 0vw;}
+}
+
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes movevideoText {
+	from {top: -100vw;}
+	to {top: 0px;}
 }
 
 /* Navbar hover effect */
@@ -45,11 +70,24 @@ body.fade-out {
 	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
 	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
 	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+	cursor: pointer;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
 }
 
 /* Navbar home button */
 .Navbar a.active { /* The active selector styles a link */
   background-color: grey;  /* This specifies the background color behind the Home button on the navbar */ 
+}
+
+/* This causes the video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured {
+	0% {
+		transform: scale(1.5,1.5);
+	}
+	100% {
+		transform: scale(1,1);
+	}
 }
 
 /* Video */
