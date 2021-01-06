@@ -5,6 +5,11 @@ html {
 /* Body */
 body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+		opacity: 1; /* This and transition affect the page loading fade in effect */
+		transition: 2.75s opacity; /* Causes a 2.75 second fade in*/
+	letter-spacing: .2vw;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5vw;
 }
 
 /* Navbar */
