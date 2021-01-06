@@ -95,8 +95,10 @@ body.fade-out {
 	position: fixed; /* This fixes our video to the page  */
 	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
 	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
-	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+	min-height: 100%; /* This ensures the video is displayed across the full height of the page */
+	top: 0;
 	z-index: -1;
+	animation: zoominoutsinglefeatured 5s;
 }
 
 /* Text over the video */ 
@@ -104,8 +106,12 @@ body.fade-out {
 	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
 	color: white; 
 	width: 100%;
-	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
+	padding-bottom: 1vh;
 	margin-top: 23%;
+		position: relative;
+	-webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
+		animation: movevideoText 4s;
 }
 
 /* Table - this section covers the styling of the columns and rows within our table */
