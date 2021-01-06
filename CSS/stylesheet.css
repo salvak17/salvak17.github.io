@@ -1,3 +1,7 @@
+/* Affects entire document */
+html {
+	scroll-behavior: smooth; /* Ensures that the page scrolling is smooth */
+}
 /* Body */
 body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
