@@ -241,28 +241,17 @@ body.fade-out {
 .Column_1 {
 	float: left;  
 	width: 50%; /* This ensures one column takes up half the page width */
-	padding: 10px; 
-	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	padding: 1.6%; 
 	background-color: #f5f5dc; 
+	height: 400px;
 }
 
 .Column_2 {
 	float: left;
 	width: 50%;
-	padding: 10px;
-	padding-top: 1.9%;
-	height: 400px;
+	padding: 1.6%;
 	background-color: #fa8072;
-}
-
-.Column_3 { /* Different Color on purpose!!! */
-	float: left;
-	width: 50%;
-	padding: 10px;
-	padding-top: 3.5%;
-	height: 450px;
-	background-color: #4d4d4d;
+	height: 400px;
 }
 
 .Row:after { /* This inserts something after the content of selected elements */
