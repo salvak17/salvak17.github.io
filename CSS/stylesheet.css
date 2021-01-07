@@ -273,20 +273,20 @@ h1 {
 p {
 	font-family: Perpetua, Rockwell Extra Bold;
 	text-align: justify;
-	letter-spacing: 1px; /* This expands the text slightly */
-	font-size: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
+	letter-spacing: .1vw; /* This expands the text slightly */
+	font-size: 1.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 
 /* Center align elements - this embraces all centered text */
 center {
 	font-family: Perpetua, Rockwell Extra Bold;
 	text-align: center;
-	letter-spacing: 1px;
-	font-size: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
+	letter-spacing: .1vw;
+	font-size: 1.5vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
 }
 
 /* Anchor elements */
@@ -305,55 +305,9 @@ img {
 	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* This causes our images to have slightly rounded edges */
     max-width: 100%; 
-    height: 340px; 
-	margin-left: auto; /* This in combination with margin-right: auto centers our images */
-    margin-right: auto;
+    height: 100%; 
+	margin: auto auto auto auto;
 	display: block;	/* By specifying block display we can ensure our images are able to be centered */
-}
-
-/* Contact form */
-input[type=text] { /* This covers the input sections of the contact form */
-	width: 100%;
-	padding: 12px;
-    border: 1px solid #ccc; /* We are setting a solid border and its colors */
-    border-radius: 4px; 
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
-    font-family: Perpetua, Rockwell Extra Bold; 
-}
-
-/* Submit button */
-input[type=submit] { /* This covers the submit button for the contact form */
-	background-color: black;
-	color: white;
-	font-weight: bold;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	display: block;
-	margin-left: auto;
-	margin-right: auto; 
-	font-family: Perpetua, Rockwell Extra Bold;
-}
-
-/* Hover effect for submit button */
-input[type=submit]:hover {
-	background-color: white; /* Makes the background turn white when hovered over */
-	color: black; /* Makes the font turn black when hovered over */
-	font-weight: bold; /* Makes the font bold when hovered over */
-	transform: scale(1.5); /* Makes the button increase 1.5 times in size */ 
-	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
-}
-
-/* Form elememt */
-form { 
-	border-radius: 5px; 
-	background-color: #f2f2f2;
-	padding: 20px;
-	font-family: "Trebuchet MS", Optima;
 }
 
 /* Center align element hover effect */
@@ -380,6 +334,101 @@ img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
     transition: transform 1s;
 	transform: scale(1.1);
+}
+
+/* Contact form styling */
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup {
+	from {right: -40vw;}
+	to {bottom: 1.75vw;}
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+	bottom: 1.75vw;
+	right: 1.75vw;
+	width: 25vw;
+	background-color: ivory;
+	color: darkslateblue;
+	border: solid;
+	cursor: pointer;
+	position: fixed;
+	-webkit-animation: movePopup 5s;
+	animation: movePopup 5s;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+	border: 3px solid #f0f1f0;
+	z-index: 8;
+	display: none;
+	position: fixed;
+	bottom: 6px;
+	right: 6px;
+}
+
+/* Form styling */
+.form-container {
+	max-width: 49vw;
+	padding: 9px;
+	background-color: white;
+}
+
+/* Input fields */
+.form-container input[type=text] {
+	width: 100%;
+	padding: .93vw;
+	margin: .6vw 0 .6vw 0;
+	border: none;
+	background: Gainsboro;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1vw;
+}
+
+/* Submit button */
+.form-container .btn {
+	background-color: darkslateblue;
+	color: ivory;
+	border-color: ivory;
+	margin-bottom: 1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+	background-color: ivory;
+	color: darkslateblue;
+	border-color: darkslateblue;
+}
+
+/* Button styling */
+button {
+	font-family: 'Times New Roman', Times, serif;
+	letter-spacing: .3vw;
+	font-size: 1.5vw;
+	font-weight: bold;
+	padding: 1.5vw 1.5vw;
+	border-style: solid;
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+}
+
+/* Hover effect for buttons */
+button:hover, .form-container .btn:hover {
+	color: ivory;
+	background-color: green;
+	-webkit-transition-duration: .25s;
+	transition-duration: .25s;
+	border-style: solid;
+	border-color: black;
+}
+.form-container .cancel:hover {
+	color: ivory;
+	background-color: darkred;
+	-webkit-transition-duration: .25s;
+	transition-duration: .25s;
+	border-style: solid;
+	border-color: black;
 }
 
 /* Footer element */
