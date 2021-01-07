@@ -416,7 +416,7 @@ button {
 /* Hover effect for buttons */
 button:hover, .form-container .btn:hover {
 	color: ivory;
-	background-color: green;
+	background-color: darkslateblue;
 	-webkit-transition-duration: .25s;
 	transition-duration: .25s;
 	border-style: solid;
