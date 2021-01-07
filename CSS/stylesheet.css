@@ -2,6 +2,7 @@
 html {
 	scroll-behavior: smooth; /* Ensures that the page scrolling is smooth */
 }
+
 /* Body */
 body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
@@ -348,9 +349,10 @@ img:hover {
 	bottom: 1.75vw;
 	right: 1.75vw;
 	width: 25vw;
-	background-color: ivory;
-	color: darkslateblue;
+	background-color: darkslateblue;
+	color: ivory;
 	border: solid;
+	border-color: black;
 	cursor: pointer;
 	position: fixed;
 	-webkit-animation: movePopup 5s;
